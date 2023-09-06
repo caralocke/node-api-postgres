@@ -31,9 +31,9 @@
 ```
 
 #### Bills: 
-| Method   | URL         | Description                                                                                            |
-| ------   | ------------| ------------------------------------------------------------------------------------------------------ |
-| [GET]    | /bills      | Returns an array filled with bill objects.                                                             |
-| [GET]    | /bills/:id  | Returns the bill object with the specified `id`.                                                       |
-| [DELETE] | /bills/:id  | Removes the bill with the specified `id` and returns the deleted bill.                                 |
-| [PUT]    | /bills/:id  | Updates the bill with the specified `id` using data from the `request body`. Returns the modified bill |
+| Method   | URL              | Description                                                                                                 |
+|----------| -----------------|-------------------------------------------------------------------------------------------------------------|
+| [GET]    | /bills           | Returns an array filled with bill objects.                                                                  |
+| [GET]    | /bills/:bill_id  | Returns the bill object with the specified `bill_id`.                                                       |
+| [DELETE] | /bills/:bill_id  | Removes the bill with the specified `bill_id` and returns the deleted bill.                                 |
+| [PUT]    | /bills/:bill_id  | Updates the bill with the specified `bill_id` using data from the `request body`. Returns the modified bill |
