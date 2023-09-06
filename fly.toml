@@ -1,0 +1,26 @@
+# fly.toml app configuration file generated for node-for-bills on 2023-09-05T12:01:49-04:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "node-for-bills"
+primary_region = "iad"
+
+[deploy]
+  release_command = "./node_modules/knex/bin/cli.js migrate:latest --env production"
+
+[mounts]
+  source = "data"
+  destination = "/data"
+
+[env]
+  PORT = "8080"
+  NODE_ENV = "production knex migrate:latest"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]

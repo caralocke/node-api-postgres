@@ -1,9 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
 const cors = require('cors');
 const billRouter = require('./routes/bill');
+const port = 3000
 
 app.use(cors({
   origin: "*"
@@ -25,6 +25,6 @@ app.use('/bills', billRouter);
 
 
 
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
   console.log(`App running on port ${port}.`)
 });
