@@ -4,7 +4,7 @@
 ## API url: https://node-for-bills.fly.dev
 
 ### Bills:
-[GET] /bills returns an array of "bill" objects if a user has entered a "bill", array may be initially empty. Bill objects are represented as:
+[GET] /bills returns an array of `bill` objects if a user has entered a `bill`, array may be initially empty. Bill objects are represented as:
 ```js
 [
     {
